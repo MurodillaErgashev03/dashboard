@@ -1,0 +1,116 @@
+@import 'src/styles/variables.scss';
+
+.sidebar {
+  background: $background !important;
+
+  .menu {
+    background-color: transparent;
+    border: none;
+    height: 70vh;
+    overflow-y: scroll;
+
+    :global {
+      .ant-menu {
+        border: none !important;
+
+        &::before {
+          display: none !important;
+        }
+      }
+      .ant-menu-item {
+        height: 48px;
+        background-color: $background;
+        color: $colorText;
+      }
+      .ant-menu-submenu-title {
+        height: 48px;
+      }
+      .ant-menu-item-selected {
+        background-color: $primary;
+        color: $white;
+      }
+      .ant-menu-submenu-title {
+        background-color: $background;
+        color: $colorText;
+      }
+
+      .ant-menu-sub {
+        background: inherit !important;
+        .ant-menu {
+          background-color: inherit !important;
+        }
+        .ant-menu-item {
+          height: 36px;
+          background-color: $background !important;
+          color: $colorPrimaryText !important;
+
+          &.ant-menu-item-selected {
+            background-color: $primary !important;
+            color: $white !important;
+            .ant-menu-title-content {
+              color: $white !important;
+            }
+          }
+        }
+        .ant-menu-title-content {
+          color: $colorText;
+        }
+      }
+    }
+  }
+
+  .logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+    }
+    h4,
+    p {
+      color: $colorText;
+    }
+  }
+}
+
+.collapse {
+  background: $primary;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  @include flex($align: center, $justify: center);
+  cursor: pointer;
+  z-index: 999;
+  position: absolute;
+  right: -10px;
+}
+.collapse_icon {
+  @include flex($align: center, $justify: center);
+}
+.logo {
+  margin-bottom: 15px;
+  @include flex($align: center, $justify: space-between);
+
+  .logoLink {
+    color: $colorText;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+  }
+}
+
+.sidebarblock {
+  width: 300px;
+  height: 100vh;
+  padding: 15px;
+  position: relative;
+  border-right: 2px solid #636b742b;
+}

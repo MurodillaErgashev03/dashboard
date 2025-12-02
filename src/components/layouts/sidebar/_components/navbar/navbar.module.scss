@@ -1,0 +1,29 @@
+@import 'src/styles/variables.scss';
+
+.navbar {
+  width: 100%;
+  background: $background2;
+  height: 72px;
+  padding: 24px;
+  @include flex($align: center, $justify: space-between);
+
+  :global {
+    .ant-breadcrumb-link {
+      a {
+        color: $colorText;
+      }
+    }
+    .ant-breadcrumb-separator {
+      color: $colorText;
+    }
+  }
+}
+
+.link {
+  margin-top: 5px;
+  font-size: 14px;
+  color: white;
+  &:hover {
+    background-color: transparent !important;
+  }
+}

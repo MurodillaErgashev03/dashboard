@@ -1,0 +1,166 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Font family
+$font-primary: 'Inter', sans-serif;
+
+$background: var(--background);
+$background2: var(--background2);
+$container2: var(--container2);
+$stroke_dark: var(--stroke_dark);
+$input-color: var(--container2);
+$colorText: var(--colorText);
+$borderColor: var(--borderColor);
+$colorPrimaryText: var(--colorPrimaryText);
+$primary: var(--primary);
+$primaryLight: var(--primaryLight);
+$container3: var(--container3);
+$colorDelete: var(--colorDelete);
+$colorErrorBg: var(--colorErrorBg);
+$loginBg: var(--loginBg);
+$colorPlaceholder: var(--colorPlaceholder);
+$loginBgSecondary: var(--loginBgSecondary);
+
+// Colors
+$bodyBg: #08141d;
+$login-bg: #0d111c;
+$login-card-bg: #111828;
+$border-color: #3c3d3e;
+$backgraund: #272829;
+$primary-light: #0c57a6;
+$colorLink: #1668dc;
+$text-primary: #131d2d;
+
+$gray: #eef2f8;
+$gray2: #f4f7fb;
+$gray3: #e5e9ee;
+$gray4: #c3c9d2;
+$gray5: #9fa7b3;
+$gray6: #565b65;
+$slider-color: #7384a0;
+// $input-color: #272829;
+$red: #d62020;
+$blue: #1c5bd5;
+$black: #000;
+$white: #fff;
+$colorError: #f5222d;
+$colorSuccess: #52c41a;
+// $colorErrorBg: #fff1f0;
+$colorSuccessBg: #f6ffed;
+
+$warning: #997f21;
+$success: #21994a;
+$danger: #992121;
+$light-info: #e4f2ff;
+$light-warning: #fff9e4;
+$light-success: #e4ffe5;
+$light-danger: #ffebeb;
+
+$shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.11);
+$card-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.06);
+$transition: all 0.3s ease-in-out;
+
+// Shadow styles
+@mixin shadow {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+// Flex styles
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin line-clamp1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+@mixin line-clamp2 {
+  @include line-clamp1;
+  -webkit-line-clamp: 2;
+}
+
+.flex-center {
+  @include flex-center;
+}
+.line-clamp1 {
+  @include line-clamp1;
+}
+
+//Scroll
+@mixin scroll {
+  overflow-y: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $gray;
+    border-radius: 50px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #b8cae5;
+    border-radius: 50px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b8cae5;
+  }
+}
+
+@mixin scroll_10 {
+  @include scroll();
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+@mixin scroll-x {
+  @include scroll();
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+}
+
+@mixin scroll-none {
+  overflow-y: auto;
+  /* width */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scroll {
+  @include scroll();
+}

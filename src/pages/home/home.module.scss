@@ -1,0 +1,28 @@
+@import 'src/styles/variables.scss';
+
+.home {
+  padding: 0 30px;
+  .titleBlock {
+    h3 {
+      color: $colorText;
+      font-size: 36px;
+    }
+    button {
+      background: #0b6bcb;
+      border: none;
+      border-radius: 6px;
+      padding: 0 20px;
+      font-size: 20px;
+      color: $white;
+    }
+  }
+  .searchBlock {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    :global(.ant-input) {
+      height: 43px;
+      width: 400px;
+    }
+  }
+}
