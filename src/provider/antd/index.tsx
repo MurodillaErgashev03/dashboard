@@ -8,7 +8,7 @@ function AntdProvider({ children }: PropsWithChildren) {
       theme={{
         token: {
           colorPrimary: colors.primary,
-          colorBgBase: colors.inputColor,
+          // colorBgBase: colors.inputColor,
           colorBorder: colors.gray3,
           colorText: colors.gray6,
           colorTextPlaceholder: colors.gray4,

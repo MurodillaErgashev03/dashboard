@@ -16,8 +16,8 @@ function CustomCheckbox({ size = 28, ...rest }: Props) {
         },
         components: {
           Checkbox: {
-            colorPrimary: colors.inputColor,
-            colorPrimaryHover: colors.inputColor,
+            // colorPrimary: colors.inputColor,
+            // colorPrimaryHover: colors.inputColor,
             colorBorder: colors.gray4,
             colorWhite: colors.textPrimary,
             colorBgTextActive: colors.primary,
